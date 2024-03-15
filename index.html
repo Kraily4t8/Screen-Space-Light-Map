@@ -1,0 +1,71 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Screen Space Light Map</title>
+  
+    <script type="text/javascript" src="./animator.js"></script>
+    <script type="text/javascript" src="./miku.js"></script>
+    <script type="text/javascript" src="./ground.js"></script>
+    <script type="text/javascript" src="./boundingbox.js"></script>
+    <script type="text/javascript" src="./scenemanager.js"></script>
+    <script type="text/javascript" src="./lighting.js"></script>
+
+    <script type="text/javascript" src="./assetmanager.js"></script>
+    <script type="text/javascript" src="./timer.js"></script>
+    <script type="text/javascript" src="./gameengine.js"></script>
+    <script type="text/javascript" src="./util.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <style>
+        body {
+            font-family: "Century Gothic";
+            font-size: 24px;
+            color: aliceblue;
+            background-color: black;
+        }
+        div {
+            text-align: center;
+        }
+        canvas {
+            display: block;
+            font-size: 20px;
+        }
+        #stack {
+            position:relative;
+            padding-left: 0;
+            padding-right: 0;
+            width: 1024px;
+            margin: auto;
+        }
+        #gameWorld {
+            position: absolute; z-index: 0;
+        }
+        #lighting {
+            position: absolute; z-index: 1;
+            pointer-events:none;
+        }
+        #options {
+            position:relative;
+            margin: auto;
+            margin-top: 630px;
+            /* left: 10%; */
+            /* right: 10%; */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <br>Screen Space Light Map<br/>
+    </div>
+    <div id="stack">
+        <canvas id="gameWorld" width="1024" height="640" style="background: darkblue; border: 1px solid black" tabindex="0" autofocus></canvas>
+        <canvas id="lighting" width="1024" height="640" tabindex="0" style=" border: 1px solid black" autofocus></canvas>
+    </div>
+    <div>
+        <br id="options">
+        <input type="button" onclick="toggleLightMap()"> LightMap
+    <br>
+    </div>
+</body>
+</html>
