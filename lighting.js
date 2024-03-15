@@ -8,7 +8,7 @@ class lighting {
     update() {}
 
     drawLightMap() {
-        let ctx2 = this.ctx3;
+        let ctx2 = this.ctx3; //pop
         ctx2.save();
         ctx2.clearRect(0,0,PARAMS.CANVAS_WIDTH, PARAMS.CANVAS_HEIGHT);
     
