@@ -15,7 +15,7 @@ ASSET_MANAGER.downloadAll(() => {
 	PARAMS.BLOCKWIDTH = 50;
 	PARAMS.CANVAS_WIDTH = canvas.width;
 	PARAMS.CANVAS_HEIGHT = canvas.height;
-	PARAMS.LIGHTMAP = false;
+	PARAMS.LIGHTMAP = true;
 
 	gameEngine.init(ctx, lightingCtx);
 

@@ -30,6 +30,7 @@
         canvas {
             display: block;
             font-size: 20px;
+            margin: auto;
         }
         #stack {
             position:relative;
@@ -59,13 +60,17 @@
         <br>Screen Space Light Map<br/>
     </div>
     <div id="stack">
-        <canvas id="gameWorld" width="1024" height="640" style="background: darkblue; border: 1px solid black" tabindex="0" autofocus></canvas>
-        <canvas id="lighting" width="1024" height="640" tabindex="0" style=" border: 1px solid black" autofocus></canvas>
+        <canvas id="gameWorld" width="1024" height="640" tabindex="0"
+            style="background: darkblue; border: 1px solid black" autofocus></canvas>
+        <canvas id="lighting" width="1024" height="640" tabindex="0" 
+            style=" border: 1px solid black"></canvas>
     </div>
     <div>
         <br id="options">
-        <input type="button" onclick="toggleLightMap()"> LightMap
+        <input type="button" onclick="toggleLightMap()"> toggleLightMap
     <br>
+    <canvas id="lighting2" width="1024" height="640" tabindex="0" 
+            style="background:white; border: 1px solid black"></canvas>
     </div>
 </body>
 </html>
